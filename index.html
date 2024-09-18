@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coach Invaders</title>
+  <link rel="stylesheet" href="./style/normalize.css">
+  <link rel="stylesheet" href="./style/main.css">
+</head>
+<body>
+  <div id="boundarie"></div>
+
+  <div id="battlefield">
+    <span id="shooter" style="left: 50%">🙎‍♂️</span>
+  </div>
+
+  <div id="score">
+    <p></p>
+  </div>
+
+  <div id="start">
+    <h1>Coach Invaders</h1>
+    <hr>
+    
+    <ul>
+      <li>Mova o cursor para mover o personagem</li>
+      <li>Aperte "Espaço" para jogar uma cadeira</li>
+      <li>Aperte "Escape (ESC)" para parar</li>
+      <li>Este jogo NÃO é compatível com dispositivos touchscreen</li>
+      <li>Redimensione a janela do navegador para modular a dificuldade, quanto maior a largura e menor a altura, mais difícil</li>
+      <li>Alegremente criado por <a href="https://felipperegazio.com">Felippe Regazio</a></li>
+    </ul>
+
+    <hr>
+
+    <form onsubmit="initialize(event); event.preventDefault()">
+        <fieldset>
+          <label>
+            <input type="radio" name="difficult" value="easy">
+            Fácil
+          </label>
+
+          <label>
+            <input type="radio" name="difficult" value="normal" checked>
+            Normal
+          </label>
+
+          <label>
+            <input type="radio" name="difficult" value="hard">
+            Difícil
+          </label>          
+        </fieldset>
+
+        <button type="submit">
+          Ok, Iniciar!
+        </button>
+    </form>
+  </div>
+
+  <div id="gameover" style="display: none">
+    <h2>Game Over!</h2>
+    <p>Infelizmente o número de invasores tornou-se maior do que o seu número de acertos, ou maior que o limite. Pressione "Escape" (ESC) para recomeçar</p>
+  </div>
+
+  <script src="./script/main.js"></script>
+</body>
+</html>
