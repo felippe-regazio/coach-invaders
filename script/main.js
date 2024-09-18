@@ -58,7 +58,7 @@ function checkChairCollision($chair) {
 }
 
 function checkGameOver() {
-  if ((score.errors || 0) > (score.hits || 0) || score.errors > score.maxInvaders) {
+  if ((score.errors || 0) > (score.hits || 0) || score.errors >= score.maxInvaders) {
     game.gameover();
   }
 }
